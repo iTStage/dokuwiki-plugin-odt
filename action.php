@@ -369,9 +369,9 @@ class action_plugin_odt extends DokuWiki_Action_Plugin {
 
         $filename = rawurlencode(cleanID(strtr($title, ':/;"', '    ')));
         if($this->getConf('output') == 'file') {
-            header('Content-Disposition: attachment; filename="' . $filename . '.pdf";');
+            header('Content-Disposition: attachment; filename="' . $filename . '.odt";');
         } else {
-            header('Content-Disposition: inline; filename="' . $filename . '.pdf";');
+            header('Content-Disposition: inline; filename="' . $filename . '.odt";');
         }
 
         //try to send file, and exit if done
